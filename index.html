@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container ">
+        <!-- Shipment-No, Description, Source, Destination, Shipping-Date, Expected-Delivery-Date -->
+        <h2 class="text-center">Employee form using a JPDB API</h2>
+        <form id="empForm" method="get">
+            <div class="form-group">
+                <span><label for="Shipment-No">Shipment-No:</label> <label id="empIdMsg">
+                    </label></span>
+                <input type="number" class="form-control" name="Shipment-No" id="Shipment-No" onchange="getEmp()" required>
+            </div>
+            <div class="form-group">
+                <label for="Description">Description:</label>
+                <input type="text" class="form-control" id="Description" name="Description">
+            </div>
+             <div class="form-group">
+                    <label for="Source">Source:</label>
+                    <input type="text" class="form-control" id="Source" name="Source">
+                </div>
+                <div class="form-group">
+                    <label for="Destination">Destination:</label>
+                    <input type="text" class="form-control" id="Destination" name="Destination">
+                </div>
+                <div class="form-group">
+                    <label for="Shipping-Date">Shipping-Date:</label>
+                    <input type="date" class="form-control" id="Shipping-Date" name="Shipping-Date">
+                </div>
+                <div class="form-group">
+                    <label for="Expected-Delivery-Date">Expected-Delivery-Date:</label>
+                    <input type="date" class="form-control" id="Expected-Delivery-Date" name="Expected-Delivery-Date">
+                </div>
+                <input type="button" class="btn btn-primary" id="customerSave" value="Save" onclick="saveCustomer();">
+                <input type="button" class="btn btn-primary" id="customerChange" value="Change" onclick="changeData();">
+                <input type="button" class="btn btn-primary" id="customerReset" value="Reset" onclick="resetForm();">
+
+        </form>
+    </div>
+</body>
+
+</html>
